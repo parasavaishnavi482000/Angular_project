@@ -1,0 +1,64 @@
+/* General Styles for the Form */
+button {
+    background-color: #17a2b8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #138496;
+  }
+  
+  /* Input Field Styles */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Update Button */
+  button + button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button + button:hover {
+    background-color: #218838;
+  }
+  
+  /* Paragraphs with Values */
+  p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Container for the Form */
+  div {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  div p {
+    font-weight: bold;
+  }
+  

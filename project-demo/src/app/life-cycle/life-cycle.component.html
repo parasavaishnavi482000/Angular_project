@@ -1,0 +1,19 @@
+<!-- <h2>ngOnChanges Demo (Manual Update)</h2>
+<input type="text" [(ngModel)]="inputData" placeholder="Enter something" />
+<button (click)="updateData()">Update</button>
+<p>Input Value: {{ inputData }}</p>
+<p>Updated Value: {{ updatedValue }}</p> -->
+
+
+
+<button (click)="toggleForm()">
+  {{ showForm ? 'Hooks' : 'Hooks' }}
+</button>
+
+<div *ngIf="showForm">
+  <input type="text" [(ngModel)]="inputData" placeholder="Enter something" />
+  <button (click)="updateData()">Update</button>
+  
+  <p>Input Value: {{ inputData }}</p>
+  <p>Updated Value: {{ updatedValue }}</p>
+</div>

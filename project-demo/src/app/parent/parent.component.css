@@ -1,0 +1,83 @@
+/* General Body Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* Title and Paragraph Styling */
+  h2 {
+    font-size: 28px;
+    color: #343a40;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #495057;
+    margin-top: 10px;
+  }
+  
+  /* Styling for Parent-Child Message Area */
+  .parent-child-container {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .parent-child-container p {
+    font-size: 16px;
+    color: #495057;
+    margin: 10px 0;
+  }
+  
+  .parent-child-container h2 {
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  /* Child Component Message Box Styling */
+  app-child {
+    display: inline-block;
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  app-child p {
+    font-size: 16px;
+    color: #495057;
+    margin: 10px 0;
+  }
+  
+  /* Button and Event Handling Styling */
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  button:active {
+    background-color: #1e7e34;
+  }
+  

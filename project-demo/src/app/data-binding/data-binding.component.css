@@ -1,0 +1,75 @@
+/* General Body and Layout Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #343a40;
+    font-size: 36px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #495057;
+    margin-top: 10px;
+  }
+  
+  /* Styling for Image (Property Binding) */
+  img {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Button Styling (Event Binding) */
+  button {
+    background-color: #17a2b8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #138496;
+  }
+  
+  /* Styling for Input Field (Two-way Data Binding) */
+  input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #17a2b8;
+  }
+  
+  /* Additional Paragraph for Two-way Data Binding */
+  input + p {
+    font-size: 18px;
+    color: #343a40;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  

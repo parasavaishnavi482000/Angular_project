@@ -1,0 +1,41 @@
+<!-- <h1>{{ title }}</h1> -->
+
+<button (click)="showDirectives = !showDirectives">NG Directives</button>
+
+<div *ngIf="showDirectives">
+
+<p *ngIf="showMessage"> NG Directives <br> <br>Welcome to ngIF Project!</p>
+<br>
+<ul>
+  <li *ngFor="let user of users">{{ user }}</li>
+</ul>
+<br>
+<button (click)="isHighlighted = !isHighlighted">
+  ngClass
+</button>
+<p [ngClass]="{ 'highlight-text': isHighlighted, 'normal-text': !isHighlighted }">
+ ngclass is used to add or remove CSS classes to an element dynamically. This helps you control how the element looks based on certain conditions or logic you set in your component.
+</p>
+<br>
+<button (click)="isHighlighte = !isHighlighte">
+  ngstyle
+</button>
+<p [ngStyle]="{'color': isHighlighte ? 'green' : 'red',
+  'font-weight': isHighlighte ? 'bold' : 'normal'}">
+  ngstyle lets you apply specific inline styles directly to elements. It's useful when you want to change things like color or font-weight based on certain conditions, all done right in the HTML.
+ </p>
+<br>
+ <div [ngSwitch]="currentDay">
+  <p *ngSwitchCase="'Monday'">It's Monday, start of the week!</p>
+  <p *ngSwitchCase="'Tuesday'">It's Tuesday, let's get going!</p>
+  <p *ngSwitchCase="'Wednesday'">It's Wednesday, halfway through!</p>
+  <p *ngSwitchCase="'Thursday'">It's Thursday, almost there!</p>
+  <p *ngSwitchCase="'Friday'">It's Friday, weekend is near!</p>
+  <p *ngSwitchCase="'Saturday'">It's Saturday, enjoy the weekend!</p>
+  <p *ngSwitchCase="'Sunday'">It's Sunday, time to relax!</p>
+  <p *ngSwitchDefault>Invalid day, please enter a valid day of the week.</p>
+</div>
+</div>
+
+
+<router-outlet></router-outlet>
