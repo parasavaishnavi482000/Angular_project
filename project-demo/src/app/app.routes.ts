@@ -12,14 +12,13 @@ import { PromiseExampleComponent } from './promise-example/promise-example.compo
 import { ObservableExampleComponent } from './observable-example/observable-example.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { AuthGuard } from './auth.guard'; // Import AuthGuard
+import { AuthGuard } from './auth.guard'; 
 import { StateManagementComponent } from './state-management/state-management.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' }, // first load login
+    { path: '', redirectTo: 'login', pathMatch: 'full' }, 
     { path: 'login', loadComponent: () => import('./login/login.component').then(m => m.LoginComponent) },
 
-    // Protected Routes (only after login, user can access)
     { path: 'directive', component: DirectivesComponent, canActivate: [AuthGuard] },
     { path: 'life-cycle', component: LifeCycleComponent, canActivate: [AuthGuard] },
     { path: 'custom-directives', component: CustomDirectivesComponent, canActivate: [AuthGuard] },
@@ -34,7 +33,6 @@ export const routes: Routes = [
     { path: 'promise-example', component: PromiseExampleComponent, canActivate: [AuthGuard] },
     { path: 'state-management', component: StateManagementComponent, canActivate: [AuthGuard] },
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-
     { path: '**', redirectTo: 'login' } ,
     
 ];

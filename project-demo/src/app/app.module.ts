@@ -6,26 +6,27 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ExceptionHandlingComponent } from './exception-handling/exception-handling.component';
 
-// (Add other component imports here like LifeCycleComponent, DataBindingComponent, etc.)
 
-import { AuthGuard } from './auth.guard'; // Import AuthGuard
+import { AuthGuard } from './auth.guard'; 
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExceptionHandlingComponent,
-    // (Add all other components here like LifeCycleComponent, DirectiveComponent, etc.)
-  ],
+    ],
   imports: [
     BrowserModule,
+    CommonModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'exception-handling', component: ExceptionHandlingComponent, canActivate: [AuthGuard] },
-      // (Add other routes like life-cycle, directive, custom-directive etc. with canActivate)
-      { path: '**', redirectTo: '/exception-handling' } // fallback route
+      { path: '**', redirectTo: '/exception-handling' } 
     ])
   ],
-  providers: [AuthGuard], // provide AuthGuard here!
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

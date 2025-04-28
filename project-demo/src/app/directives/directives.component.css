@@ -1,15 +1,15 @@
-/* When isHighlighted is true */
+
 .highlight-text {
     color: rgb(174, 180, 122);
     font-weight: bold;
   }
   
-  /* When isHighlighted is false */
+
   .normal-text {
     color: black;
     font-weight: normal;
   }
-  /* General Body and Page Styles */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f7f6;
@@ -22,7 +22,7 @@ h1 {
   color: #343a40;
 }
 
-/* Button Styles */
+
 button {
   background-color: #17a2b8;
   color: white;
@@ -39,7 +39,7 @@ button:hover {
   background-color: #138496;
 }
 
-/* Paragraph and List Styles */
+
 p {
   font-size: 16px;
   color: #343a40;
@@ -60,7 +60,7 @@ li {
   color: #495057;
 }
 
-/* Highlighted Classes */
+
 .highlight-text {
   background-color: rgb(40, 40, 35);
   font-weight: bold;
@@ -72,7 +72,7 @@ li {
   color: #343a40;
 }
 
-/* ngStyle specific styling */
+
 .ng-style-paragraph {
   padding: 10px;
   border-radius: 5px;
@@ -88,7 +88,7 @@ li {
   font-weight: normal;
 }
 
-/* ngSwitch container */
+
 div[ngSwitch] {
   padding: 20px;
   background-color: #f1f3f5;
@@ -102,7 +102,7 @@ div[ngSwitch] p {
   margin: 10px 0;
 }
 
-/* General Layout */
+
 div {
   padding: 20px;
   margin: 20px auto;

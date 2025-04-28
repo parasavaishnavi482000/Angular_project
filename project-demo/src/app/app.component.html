@@ -1,13 +1,13 @@
-<!-- Outside Login Button (only show if not logged in) -->
+
 <button *ngIf="!isLoggedIn" class="btn btn-success login-btn" (click)="login()">Login</button>
 
 <div class="sidebar-container" *ngIf="isLoggedIn">
-  
-  <!-- Sidebar -->
+
+  <button class="open-sidebar-btn" (click)="toggleSidebar()">☰</button>
+
   <div class="sidebar" [ngClass]="{'sidebar-collapsed': isSidebarCollapsed}">
     <div class="sidebar-header border-bottom">
-      <br>MENU
-      <!-- Optional Sidebar Title -->
+      MENU
     </div>
 
     <ul class="sidebar-nav">
@@ -62,7 +62,7 @@
         <a class="nav-link" routerLink="/state-management" routerLinkActive="active">state-management</a>
       </li><br>
 
-      <!-- LOGOUT Button at the End -->
+   
       <li class="nav-item">
         <button class="btn btn-danger w-100" (click)="logout()">Logout</button>
       </li><br>
@@ -70,7 +70,6 @@
     </ul>
   </div>
 
-  <!-- Main Content -->
   <div class="main-content" [ngStyle]="{'margin-left': isSidebarCollapsed ? '60px' : '250px'}">
     <router-outlet></router-outlet>
   </div>

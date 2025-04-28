@@ -1,15 +1,15 @@
-/* Global body background color */
+
 body {
-  background-color: #f9f9f9; /* Light pastel gray background */
+  background-color: #f9f9f9; 
   font-family: Arial, sans-serif;
-  color: #333; /* Dark text for contrast */
+  color: #333; 
   margin: 0;
   padding: 20px;
 }
 
-/* Title Style */
+
 h1 {
-  color: #ff6f61; /* Pastel coral color */
+  color: #ff6f61;
   font-size: 2.5em;
   font-weight: bold;
   text-align: center;
@@ -17,18 +17,18 @@ h1 {
   text-transform: capitalize;
 }
 
-/* Image Style */
+
 img {
   width: 150px;
   height: auto;
   display: block;
   margin: 0 auto 20px;
-  border-radius: 10px; /* Rounded corners for the image */
+  border-radius: 10px; 
 }
 
-/* Button Style */
+
 button {
-  background-color: #7fd1b9; /* Pastel teal color */
+  background-color: #7fd1b9;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
@@ -41,34 +41,34 @@ button {
 }
 
 button:hover {
-  background-color: #62b8a8; /* Darker shade of teal for hover */
-  box-shadow: 0 0 10px rgba(127, 209, 185, 0.5); /* Soft glow effect */
+  background-color: #62b8a8; 
+  box-shadow: 0 0 10px rgba(127, 209, 185, 0.5);
 }
 
-/* Input Style */
+
 input {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc; /* Light gray border */
+  border: 1px solid #ccc; 
   border-radius: 5px;
-  background-color: #f1f1f1; /* Light pastel background for input */
+  background-color: #f1f1f1; 
   width: 80%;
   display: block;
   margin: 0 auto;
   transition: all 0.3s ease;
 }
 
-/* Input focus effect */
+
 input:focus {
-  border-color: #7fd1b9; /* Pastel teal focus border */
-  background-color: #e9f8f3; /* Light pastel teal background */
+  border-color: #7fd1b9; 
+  background-color: #e9f8f3; 
   outline: none;
 }
 
-/* Paragraph Style */
+
 p {
   font-size: 18px;
-  color: #555; /* Dark gray for better readability */
+  color: #555; 
   text-align: center;
   font-weight: 600;
   margin-top: 20px;

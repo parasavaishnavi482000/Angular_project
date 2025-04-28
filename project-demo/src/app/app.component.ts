@@ -12,17 +12,20 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'Project-Demo';
-  isSidebarCollapsed = false;
+  isSidebarCollapsed = true;
    isLoggedIn = false;
 
+   login() {
+    this.isLoggedIn = true;
+    this.isSidebarCollapsed = true; 
+  }
+  
+  logout() {
+    this.isLoggedIn = false;
+    this.isSidebarCollapsed = true; 
+  }
+  
   toggleSidebar() {
     this.isSidebarCollapsed = !this.isSidebarCollapsed;
-  }
-  login() {
-    this.isLoggedIn = true;  // After clicking login button
-  }
-
-  logout() {
-    this.isLoggedIn = false; // After clicking logout button
   }
 }

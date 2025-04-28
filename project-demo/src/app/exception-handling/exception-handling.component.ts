@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-exception-handling',
   standalone: true,
-  imports: [CommonModule,HttpClientModule],  // Import necessary modules
+  imports: [CommonModule,HttpClientModule], 
   templateUrl: './exception-handling.component.html',
   styleUrls: ['./exception-handling.component.css']
 })
@@ -14,7 +14,7 @@ export class ExceptionHandlingComponent {
 
   simulateFrontendError() {
     try {
-      // Local frontend error
+   
       throw new Error('This is a simulated frontend error!');
     } catch (error) {
       console.error('Frontend Error:', error);
@@ -23,7 +23,7 @@ export class ExceptionHandlingComponent {
   }
 
   simulateApiCall() {
-    // This will trigger a backend error
+    
     this.http.get('http://localhost:3000/error-endpoint').subscribe({
       next: (res) => console.log(res),
       error: (err) => {
@@ -33,7 +33,7 @@ export class ExceptionHandlingComponent {
     });
   }
 
-  // Simulate a global error
+ 
   simulateGlobalError() {
     try {
       throw new Error('This is a simulated global error!');

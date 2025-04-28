@@ -1,16 +1,16 @@
-/* General container */
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f1f8ff; /* Soft pastel blue background */
+  background-color: #f1f8ff; 
   border-radius: 8px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading style */
+
 .heading {
-  color: #7f4c7d; /* Pastel Purple */
+  color: #7f4c7d;
   font-size: 28px;
   text-align: center;
   font-family: 'Arial', sans-serif;
@@ -18,7 +18,7 @@
   border-bottom: 2px solid #d3c0d3;
 }
 
-/* Button Styling */
+
 .btn {
   border-radius: 30px;
   padding: 10px 20px;
@@ -26,15 +26,15 @@
 }
 
 .btn-primary {
-  background-color: #9c7cbf; /* Pastel Lavender */
+  background-color: #9c7cbf; 
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #7f4c7d; /* Darker lavender */
+  background-color: #7f4c7d; 
 }
 
-/* Loading and message text */
+
 .loading-text, .message-text {
   font-size: 18px;
   text-align: center;
@@ -43,20 +43,20 @@
 }
 
 .loading-text {
-  color: #f7a7b5; /* Light pastel pink */
+  color: #f7a7b5; 
   font-weight: bold;
 }
 
 .message-text {
-  color: #6c757d; /* Soft gray color for message text */
-  background-color: #f0e6f6; /* Pastel light purple background */
+  color: #6c757d;
+  background-color: #f0e6f6; 
   border-radius: 5px;
   padding: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
-/* Responsive styling */
+
 @media (max-width: 768px) {
   .container {
     padding: 15px;

@@ -8,8 +8,8 @@ import { provideStore } from '@ngrx/store';
 bootstrapApplication(AppComponent, {
   ...appConfig,
   providers: [
-    ...(appConfig.providers || []), // ✅ include existing providers from appConfig
-    importProvidersFrom(HttpClientModule) // ✅ add HttpClientModule
+    ...(appConfig.providers || []), 
+    importProvidersFrom(HttpClientModule)
     ,
     provideStore()
 ]

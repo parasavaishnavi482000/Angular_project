@@ -1,4 +1,4 @@
-/* General Styling for Error Buttons */
+
 button {
     padding: 12px 20px;
     border: none;
@@ -9,52 +9,52 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  /* Frontend Error Button */
+
   button:nth-child(1) {
-    background-color: #f44336;  /* Red for frontend error */
+    background-color: #f44336;  
     color: white;
   }
   
   button:nth-child(1):hover {
-    background-color: #d32f2f;  /* Darker red on hover */
+    background-color: #d32f2f;  
   }
   
   button:nth-child(1):active {
-    background-color: #b71c1c;  /* Dark red when clicked */
-    transform: scale(0.98);  /* Slightly shrink when clicked */
+    background-color: #b71c1c;  
+    transform: scale(0.98);  
   }
   
-  /* Backend Error Button */
+
   button:nth-child(2) {
-    background-color: #ff9800;  /* Orange for backend error */
+    background-color: #ff9800;  
     color: white;
   }
   
   button:nth-child(2):hover {
-    background-color: #fb8c00;  /* Darker orange on hover */
+    background-color: #fb8c00;  
   }
   
   button:nth-child(2):active {
-    background-color: #f57c00;  /* Dark orange when clicked */
+    background-color: #f57c00; 
     transform: scale(0.98);
   }
   
-  /* Global Error Button */
+ 
   button:nth-child(3) {
-    background-color: #9c27b0;  /* Purple for global error */
+    background-color: #9c27b0;  
     color: white;
   }
   
   button:nth-child(3):hover {
-    background-color: #7b1fa2;  /* Darker purple on hover */
+    background-color: #7b1fa2;  
   }
   
   button:nth-child(3):active {
-    background-color: #6a1b9a;  /* Dark purple when clicked */
+    background-color: #6a1b9a;  
     transform: scale(0.98);
   }
   
-  /* Button Container Styling */
+ 
   div {
     display: flex;
     justify-content: center;

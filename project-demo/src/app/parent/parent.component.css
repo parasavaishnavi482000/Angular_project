@@ -1,4 +1,4 @@
-/* General Body Styles */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f9f9f9;
@@ -7,7 +7,7 @@ body {
     text-align: center;
   }
   
-  /* Title and Paragraph Styling */
+
   h2 {
     font-size: 28px;
     color: #343a40;
@@ -21,7 +21,7 @@ body {
     margin-top: 10px;
   }
   
-  /* Styling for Parent-Child Message Area */
+ 
   .parent-child-container {
     background-color: #ffffff;
     padding: 30px;
@@ -43,7 +43,7 @@ body {
     margin-bottom: 20px;
   }
   
-  /* Child Component Message Box Styling */
+  
   app-child {
     display: inline-block;
     background-color: #f1f3f5;
@@ -60,7 +60,7 @@ body {
     margin: 10px 0;
   }
   
-  /* Button and Event Handling Styling */
+  
   button {
     background-color: #28a745;
     color: white;

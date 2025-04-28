@@ -1,4 +1,4 @@
-// state-management.component.ts
+
 import { Component } from '@angular/core';
 import { StateManagementService } from '../state-management.service';
 @Component({
@@ -10,17 +10,16 @@ export class StateManagementComponent {
   counter = 0;
 
   constructor(private stateService: StateManagementService) {
-    // Subscribe to the counter observable from the service
-    this.stateService.counter$.subscribe(value => {
+     this.stateService.counter$.subscribe(value => {
       this.counter = value;
     });
   }
 
   increment() {
-    this.stateService.increment();  // Call service to increment counter
+    this.stateService.increment();  
   }
 
   decrement() {
-    this.stateService.decrement();  // Call service to decrement counter
+    this.stateService.decrement();  
   }
 }

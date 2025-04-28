@@ -1,11 +1,11 @@
-/* Custom hover effect directive */
+
 appHoverHighlight {
-  transition: all 0.3s ease-in-out; /* Smooth transition for background color change */
+  transition: all 0.3s ease-in-out; 
 }
 
-/* Style for the h2 when hovered */
+
 h2[appHoverHighlight] {
-  color: #333333; /* Default dark gray text */
+  color: #333333;
   font-size: 28px;
   font-weight: 600;
   text-transform: capitalize;
@@ -14,15 +14,15 @@ h2[appHoverHighlight] {
 }
 
 h2[appHoverHighlight]:hover {
-  color: #fff; /* White text color when hovered */
-  background-color: lightcoral; /* Light coral background on hover */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(240, 128, 128, 0.6); /* Soft coral glow effect */
+  color: #fff; 
+  background-color: lightcoral; 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(240, 128, 128, 0.6); 
 }
 
-/* Style for the p when hovered */
+
 p[appHoverHighlight] {
-  color: #555555; /* Default gray text */
+  color: #555555; 
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
@@ -31,8 +31,8 @@ p[appHoverHighlight] {
 }
 
 p[appHoverHighlight]:hover {
-  color: #fff; /* White text color when hovered */
-  background-color: lavender; /* Light lavender background on hover */
-  border-radius: 6px; /* Rounded corners */
-  box-shadow: 0 0 8px rgba(230, 230, 250, 0.6); /* Soft lavender glowing effect */
+  color: #fff;
+  background-color: lavender;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(230, 230, 250, 0.6);
 }

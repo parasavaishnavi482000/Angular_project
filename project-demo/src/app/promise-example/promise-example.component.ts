@@ -10,30 +10,30 @@ export class PromiseExampleComponent {
   message: string = '';
   loading: boolean = false;
 
-  // Simulating an async API call with a Promise
+ 
   fetchDataUsingPromise() {
     this.loading = true;
-    this.message = ''; // Clear any previous messages
+    this.message = ''; 
     this.getDataUsingPromise().then(data => {
       this.loading = false;
-      this.message = data; // Assign the data received from the promise
+      this.message = data; 
     }).catch(error => {
       this.loading = false;
       this.message = 'Error fetching data!';
     });
   }
 
-  // Simulating an API call that returns a Promise
+  
   getDataUsingPromise(): Promise<string> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const success = true; // Simulate a successful response
+        const success = true; 
         if (success) {
           resolve('Data fetched successfully using Promise!');
         } else {
           reject('Failed to fetch data!');
         }
-      }, 2000); // 2-second delay to simulate an API call
+      }, 2000); 
     });
   }
 }

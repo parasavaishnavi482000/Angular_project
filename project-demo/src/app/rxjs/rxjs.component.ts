@@ -11,25 +11,21 @@ import { Subject } from 'rxjs';
 })
 export class RxjsComponent {
   isSubscribed = false;
-  newsUpdateSubject = new Subject<string>(); // Subject to simulate newspaper updates
-  subscribers: { person: string, updates: string[] }[] = []; // List to store subscribers
+  newsUpdateSubject = new Subject<string>();
+  subscribers: { person: string, updates: string[] }[] = [];
 
-  // Subscribe to the newspaper
   subscribe(person: string) {
     if (!this.isSubscribed) {
-      // Create a new subscriber with the correct type for 'updates'
       const subscriber: { person: string; updates: string[] } = {
         person,
-        updates: [] // Initialize empty updates array
+        updates: [] 
       };
 
-      // Add the subscriber to the list
       this.subscribers.push(subscriber);
 
-      // Subscribe to the news updates
-      this.newsUpdateSubject.subscribe(
+     this.newsUpdateSubject.subscribe(
         (message) => {
-          subscriber.updates.push(message); // Add the new message to the subscriber's updates
+          subscriber.updates.push(message); 
           console.log(`${person} received update: ${message}`);
         },
         (error) => {
@@ -37,22 +33,20 @@ export class RxjsComponent {
         }
       );
 
-      // Mark as subscribed to prevent multiple subscriptions
-      this.isSubscribed = true;
+     this.isSubscribed = true;
     }
   }
 
-  // Simulate a newspaper update every 5 seconds
   simulateUpdates() {
     let updateCount = 1;
     setInterval(() => {
       const message = `Breaking News Update #${updateCount}`;
-      this.newsUpdateSubject.next(message); // Emit a new newspaper update
+      this.newsUpdateSubject.next(message); 
       updateCount++;
     }, 5000);
   }
 
-  // Manually trigger the newspaper updates
+
   triggerUpdates() {
     this.simulateUpdates();
   }

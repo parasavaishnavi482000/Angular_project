@@ -1,12 +1,12 @@
-/* Outside toggle button styling */
+
 .open-sidebar-btn {
   position: fixed;
   top: 10px;
   left: 10px;
-  z-index: 1100; /* Above the sidebar */
+  z-index: 1100; 
 }
 
-/* Sidebar base */
+
 .sidebar {
   width: 250px;
   transition: width 0.3s;
@@ -17,19 +17,30 @@
   overflow: hidden;
 }
 
-/* Content area */
+
 .main-content {
   flex-grow: 1;
   padding: 20px;
   transition: margin-left 0.3s ease;
 }
-/* Ensure the text is white */
+
 .white-text {
   color: #adb5bd;
   text-decoration: none;
 }
 
-/* Change color on hover */
+
 .white-text:hover {
-  background-color: #6ec7d6;/* Adjust to your preferred hover color */
+  background-color: #6ec7d6;
+}
+.open-sidebar-btn {
+  position: fixed;
+  top: 3px;
+  left: 7px;
+  z-index: 1100;
+  font-size: 22px;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 10px;
+  background-color:rgb(180, 149, 115)
 }
