@@ -1,0 +1,103 @@
+/* General container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f9ff; /* Soft pastel blue background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading style */
+  .heading {
+    color: #8b6fa6; /* Soft pastel lavender */
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #d6c4d8;
+  }
+  
+  /* Button Styling */
+  .btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .btn-primary {
+    background-color: #a7c8f2; /* Pastel light blue */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #85b7e6; /* Slightly darker blue on hover */
+  }
+  
+  /* Loading and message text */
+  .loading-text, .message-text {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .loading-text {
+    color: #f2b8c4; /* Soft pastel pink */
+    font-weight: bold;
+  }
+  
+  .message-text {
+    color: #6c757d; /* Soft gray color for message text */
+    background-color: #e8d6f1; /* Light pastel purple background */
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  /* Data display section */
+  .data-display {
+    background-color: #f7e8d6; /* Pastel yellow */
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .data-display h4 {
+    color: #9a6a8a; /* Darker pastel lavender */
+    font-size: 20px;
+  }
+  
+  .data-display pre {
+    background-color: #f1f0f6; /* Very light lavender */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow-x: auto;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .heading {
+      font-size: 24px;
+    }
+  
+    .btn {
+      font-size: 14px;
+    }
+  
+    .loading-text, .message-text {
+      font-size: 16px;
+    }
+  
+    .data-display h4 {
+      font-size: 18px;
+    }
+  }
+  

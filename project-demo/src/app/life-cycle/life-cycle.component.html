@@ -6,14 +6,17 @@
 
 
 
-<button (click)="toggleForm()">
-  {{ showForm ? 'Hooks' : 'Hooks' }}
-</button>
+<div class="container">
+  <button class="btn-toggle" (click)="toggleForm()">
+    {{ showForm ? 'Hide Form' : 'Show Form' }}
+  </button>
 
-<div *ngIf="showForm">
-  <input type="text" [(ngModel)]="inputData" placeholder="Enter something" />
-  <button (click)="updateData()">Update</button>
-  
-  <p>Input Value: {{ inputData }}</p>
-  <p>Updated Value: {{ updatedValue }}</p>
+  <div *ngIf="showForm" class="form-section">
+    <input type="text" [(ngModel)]="inputData" placeholder="Enter something" class="input-field" />
+    <button class="btn-update" (click)="updateData()">Update</button>
+    
+    <p class="input-value">Input Value: {{ inputData }}</p>
+    <p class="updated-value">Updated Value: {{ updatedValue }}</p>
+  </div>
 </div>
+

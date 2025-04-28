@@ -1,75 +1,75 @@
-/* General Body and Layout Styles */
+/* Global body background color */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7f6;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  h1 {
-    color: #343a40;
-    font-size: 36px;
-    margin-top: 20px;
-    font-weight: 600;
-  }
-  
-  p {
-    font-size: 16px;
-    color: #495057;
-    margin-top: 10px;
-  }
-  
-  /* Styling for Image (Property Binding) */
-  img {
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Button Styling (Event Binding) */
-  button {
-    background-color: #17a2b8;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-  }
-  
-  button:hover {
-    background-color: #138496;
-  }
-  
-  /* Styling for Input Field (Two-way Data Binding) */
-  input[type="text"] {
-    padding: 10px;
-    width: 250px;
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-  }
-  
-  input[type="text"]:focus {
-    border-color: #17a2b8;
-  }
-  
-  /* Additional Paragraph for Two-way Data Binding */
-  input + p {
-    font-size: 18px;
-    color: #343a40;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
+  background-color: #f9f9f9; /* Light pastel gray background */
+  font-family: Arial, sans-serif;
+  color: #333; /* Dark text for contrast */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Title Style */
+h1 {
+  color: #ff6f61; /* Pastel coral color */
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/* Image Style */
+img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Button Style */
+button {
+  background-color: #7fd1b9; /* Pastel teal color */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 10px auto;
+}
+
+button:hover {
+  background-color: #62b8a8; /* Darker shade of teal for hover */
+  box-shadow: 0 0 10px rgba(127, 209, 185, 0.5); /* Soft glow effect */
+}
+
+/* Input Style */
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+  background-color: #f1f1f1; /* Light pastel background for input */
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+input:focus {
+  border-color: #7fd1b9; /* Pastel teal focus border */
+  background-color: #e9f8f3; /* Light pastel teal background */
+  outline: none;
+}
+
+/* Paragraph Style */
+p {
+  font-size: 18px;
+  color: #555; /* Dark gray for better readability */
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+}

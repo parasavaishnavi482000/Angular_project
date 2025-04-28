@@ -1,0 +1,31 @@
+<div class="container">
+  <h2 class="heading">Newspaper Subscription</h2>
+
+  <!-- Subscribe Form -->
+  <div class="form-group">
+    <input type="text" #personName class="form-control" placeholder="Enter your name" />
+    <button class="btn btn-primary mt-2" (click)="subscribe(personName.value)">
+      Subscribe to Newspaper
+    </button>
+  </div>
+
+  <!-- Subscriber List -->
+  <div *ngIf="subscribers.length > 0">
+    <h3 class="subscribers-heading">Subscribers</h3>
+    <ul class="subscribers-list">
+      <li *ngFor="let subscriber of subscribers" class="subscriber-item">
+        {{ subscriber.person }}:
+        <ul class="updates-list">
+          <li *ngFor="let update of subscriber.updates" class="update-item">
+            {{ update }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Trigger News Updates -->
+  <button class="btn btn-success mt-3" (click)="triggerUpdates()">
+    Trigger Newspaper Updates
+  </button>
+</div>

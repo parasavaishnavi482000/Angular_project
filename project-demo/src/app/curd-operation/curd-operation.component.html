@@ -1,0 +1,95 @@
+<div class="container py-5">
+
+  <!-- Card for Form -->
+  <div class="custom-form-card mb-5">
+    <div class="form-header">
+      <h2>{{ isEditing ? 'Update Employee' : 'Add Employee' }}</h2>
+    </div>
+
+    <form [formGroup]="employeeForm" (ngSubmit)="isEditing ? onUpdate() : onSubmit()" class="form-body">
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label>Name</label>
+          <input type="text" formControlName="name" class="form-control" placeholder="Full Name">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>Email</label>
+          <input type="email" formControlName="email" class="form-control" placeholder="Email Address">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>Contact No</label>
+          <input type="text" formControlName="contactNo" class="form-control" placeholder="Phone Number">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>City</label>
+          <input type="text" formControlName="city" class="form-control" placeholder="City Name">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>State</label>
+          <input type="text" formControlName="state" class="form-control" placeholder="State Name">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>Pin Code</label>
+          <input type="text" formControlName="pinCode" class="form-control" placeholder="Postal Code">
+        </div>
+
+        <div class="col-12 mb-4">
+          <label>Address</label>
+          <textarea formControlName="address" class="form-control" rows="3" placeholder="Full Address"></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions d-flex justify-content-center">
+        <button type="submit" class="btn btn-save">{{ isEditing ? 'Update' : 'Save' }}</button>
+        <button type="button" class="btn btn-cancel" (click)="onReset()">Reset</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Card for Table -->
+  <div class="custom-table-card">
+    <div class="table-header">
+      <h3>Employee Directory</h3>
+    </div>
+
+    <div class="table-body table-responsive">
+      <table class="table custom-table align-middle">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Pin Code</th>
+            <th>Address</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of employeeList">
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.contactNo }}</td>
+            <td>{{ emp.city }}</td>
+            <td>{{ emp.state }}</td>
+            <td>{{ emp.pinCode }}</td>
+            <td>{{ emp.address }}</td>
+            <td>
+              <button class="btn btn-edit" (click)="onEdit(emp)">Edit</button>
+              <button class="btn btn-delete" (click)="onDelete(emp.id!)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

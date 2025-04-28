@@ -1,9 +1,38 @@
-h2, p {
-    padding: 10px;
-    border: 1px solid #ccc;
-    display: inline-block;
-    margin: 10px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-  
+/* Custom hover effect directive */
+appHoverHighlight {
+  transition: all 0.3s ease-in-out; /* Smooth transition for background color change */
+}
+
+/* Style for the h2 when hovered */
+h2[appHoverHighlight] {
+  color: #333333; /* Default dark gray text */
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 10px;
+  background-color: transparent;
+}
+
+h2[appHoverHighlight]:hover {
+  color: #fff; /* White text color when hovered */
+  background-color: lightcoral; /* Light coral background on hover */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(240, 128, 128, 0.6); /* Soft coral glow effect */
+}
+
+/* Style for the p when hovered */
+p[appHoverHighlight] {
+  color: #555555; /* Default gray text */
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 8px;
+  background-color: transparent;
+}
+
+p[appHoverHighlight]:hover {
+  color: #fff; /* White text color when hovered */
+  background-color: lavender; /* Light lavender background on hover */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 0 8px rgba(230, 230, 250, 0.6); /* Soft lavender glowing effect */
+}

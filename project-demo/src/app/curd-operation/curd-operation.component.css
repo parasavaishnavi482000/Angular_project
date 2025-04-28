@@ -1,0 +1,130 @@
+/* 🌸 Custom Form Card with Pastel Theme */
+.custom-form-card {
+    background: #fdf6f0; /* Soft pastel peach */
+    border: 2px solid #f7d9c4;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 8px 20px rgba(247, 217, 196, 0.3);
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  
+    h2 {
+      color: #f28c8c; /* Soft pastel pink */
+      font-weight: 700;
+      font-size: 2rem;
+    }
+  }
+  
+  .form-body input, .form-body textarea {
+    border-radius: 10px;
+    border: 1px solid #e8cfc7;
+    padding: 12px;
+    font-size: 15px;
+    background-color: #fffaf7;
+    transition: 0.3s ease;
+  
+    &:focus {
+      border-color: #f7b7a3;
+      box-shadow: 0 0 5px #f7b7a3;
+    }
+  }
+  
+  /* 🌼 Form Actions */
+  .form-actions .btn {
+    margin: 0 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .btn-save {
+    background-color: #f7b7a3; /* Pastel pink */
+    color: #fff;
+    border: none;
+  
+    &:hover {
+      background-color: #f28c8c;
+    }
+  }
+  
+  .btn-cancel {
+    background-color: #d3e0dc; /* Pastel mint */
+    color: #4a5759;
+    border: none;
+  
+    &:hover {
+      background-color: #b6cfc8;
+    }
+  }
+  
+  /* 🪴 Custom Table Card */
+  .custom-table-card {
+    background: #f5f3f0; /* Very soft pastel gray */
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .table-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  
+    h3 {
+      color: #6c757d;
+      font-weight: 700;
+    }
+  }
+  
+  /* 🍃 Table Styling */
+  .custom-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+  
+    th {
+      background-color: #d8e2dc; /* 🩵 Pastel Teal (New soft color instead of orange) */
+      color: #555;
+      font-weight: bold;
+      text-align: center;
+    }
+  
+    td {
+      background: #ffffff;
+      text-align: center;
+    }
+  
+    tbody tr:hover td {
+      background-color: #f2eae4; /* Soft hover */
+    }
+  }
+  
+  /* 🌸 Action Buttons */
+  .btn-edit {
+    background: #a8dadc; /* Soft pastel aqua */
+    border: none;
+    padding: 5px 12px;
+    margin-right: 5px;
+    color: #03353e;
+    border-radius: 8px;
+  
+    &:hover {
+      background: #89c9ca;
+    }
+  }
+  
+  .btn-delete {
+    background: #f4a6a6; /* Light pastel red */
+    border: none;
+    padding: 5px 12px;
+    color: #691818;
+    border-radius: 8px;
+  
+    &:hover {
+      background: #e08888;
+    }
+  }
+  

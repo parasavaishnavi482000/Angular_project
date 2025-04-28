@@ -1,0 +1,102 @@
+/* General container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f8ff; /* Soft pastel blue background */
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+.heading {
+  color: #7f4c7d; /* Pastel Purple */
+  font-size: 28px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #d3c0d3;
+}
+
+/* Subscribe form */
+.form-group {
+  background-color: #f9f2f9; /* Light pastel pink background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #c6c6c6;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background-color: #f0e6f6; /* Light pastel purple */
+}
+
+/* Buttons */
+.btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #9c7cbf; /* Pastel Lavender */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #7f4c7d; /* Darker lavender */
+}
+
+.btn-success {
+  background-color: #76d7c4; /* Pastel mint green */
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #48c6b8; /* Darker mint green */
+}
+
+/* Subscribers section */
+.subscribers-heading {
+  color: #6a4c7d; /* Soft pastel purple */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.subscribers-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.subscriber-item {
+  padding: 10px;
+  margin-bottom: 12px;
+  background-color: #f7e6f5; /* Light pastel pink */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.update-item {
+  font-size: 14px;
+  color: #5e5e5e;
+  margin-left: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}

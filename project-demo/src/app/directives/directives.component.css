@@ -1,6 +1,6 @@
 /* When isHighlighted is true */
 .highlight-text {
-    color: blue;
+    color: rgb(174, 180, 122);
     font-weight: bold;
   }
   
@@ -62,7 +62,7 @@ li {
 
 /* Highlighted Classes */
 .highlight-text {
-  background-color: yellow;
+  background-color: rgb(40, 40, 35);
   font-weight: bold;
   padding: 5px;
 }

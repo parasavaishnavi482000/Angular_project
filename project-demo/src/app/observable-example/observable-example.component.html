@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="heading">Observable with Multiple Streams Example</h2>
+    <button class="btn btn-primary" (click)="fetchDataUsingForkJoin()">Fetch Data</button>
+  
+    <!-- Loading and message sections -->
+    <div *ngIf="loading" class="loading-text">Loading...</div>
+    <div *ngIf="message" class="message-text">{{ message }}</div>
+  
+    <!-- Data Display Sections -->
+    <div *ngIf="userData" class="data-display">
+      <h4>User Data:</h4>
+      <pre>{{ userData | json }}</pre>
+    </div>
+    <div *ngIf="productData" class="data-display">
+      <h4>Product Data:</h4>
+      <pre>{{ productData | json }}</pre>
+    </div>
+  </div>
+  

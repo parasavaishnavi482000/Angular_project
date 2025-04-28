@@ -1,40 +1,78 @@
-<!-- Outside toggle button -->
-<button class="btn btn-info open-sidebar-btn" (click)="toggleSidebar()">☰</button>
+<!-- Outside Login Button (only show if not logged in) -->
+<button *ngIf="!isLoggedIn" class="btn btn-success login-btn" (click)="login()">Login</button>
 
-<div class="sidebar-container">
+<div class="sidebar-container" *ngIf="isLoggedIn">
+  
   <!-- Sidebar -->
   <div class="sidebar" [ngClass]="{'sidebar-collapsed': isSidebarCollapsed}">
     <div class="sidebar-header border-bottom">
-      <br><br>
-      <!-- <button class="btn btn-light toggle-btn" (click)="toggleSidebar()">☰</button> -->
-      <!-- <h4 *ngIf="!isSidebarCollapsed" class="text-center py-2">Sidebar Menu</h4> -->
+      <br>MENU
+      <!-- Optional Sidebar Title -->
     </div>
+
     <ul class="sidebar-nav">
       <li class="nav-item mt-5">
-        <a class="nav-link" routerLink="/life-cycle" routerLinkActive="active" >Life Cycle</a>
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
       </li><br>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/life-cycle" routerLinkActive="active">life cycle</a>
+      </li><br>
+
       <li class="nav-item">
         <a class="nav-link" routerLink="/directive" routerLinkActive="active">Directives</a>
       </li><br>
+
       <li class="nav-item">
         <a class="nav-link" routerLink="/custom-directives" routerLinkActive="active">Custom Directives</a>
       </li><br>
+
       <li class="nav-item">
         <a class="nav-link" routerLink="/data-binding" routerLinkActive="active">Data Binding</a>
       </li><br>
+
       <li class="nav-item">
-        <a routerLink="/parent" class="white-text">Parent-Child</a> |<br>
-        <a [routerLink]="['/route', 'HelloFromRoute']" class="white-text">Route Communication</a>
-      </li><br>      
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/exception-handling" routerLinkActive="active">Exception-Handling</a>
+        <a class="nav-link" routerLink="/parent" routerLinkActive="active">Parent-Child</a>
       </li><br>
-     
+
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/route', 'HelloFromRoute']" routerLinkActive="active">Route Communication</a>
+      </li><br>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/exception-handling" routerLinkActive="active">Exception Handling</a>
+      </li><br>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/curd-operation" routerLinkActive="active">CRUD Operation</a>
+      </li><br>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/rxjs" routerLinkActive="active">RxJS</a>
+      </li><br>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/promise-example" routerLinkActive="active">Promise Example</a>
+      </li><br>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/observable-example" routerLinkActive="active">Observable Example</a>
+      </li><br>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/state-management" routerLinkActive="active">state-management</a>
+      </li><br>
+
+      <!-- LOGOUT Button at the End -->
+      <li class="nav-item">
+        <button class="btn btn-danger w-100" (click)="logout()">Logout</button>
+      </li><br>
+      
     </ul>
   </div>
 
-  <!-- Content -->
+  <!-- Main Content -->
   <div class="main-content" [ngStyle]="{'margin-left': isSidebarCollapsed ? '60px' : '250px'}">
     <router-outlet></router-outlet>
   </div>
+  
 </div>
