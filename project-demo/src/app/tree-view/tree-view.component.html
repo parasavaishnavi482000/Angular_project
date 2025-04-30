@@ -1,0 +1,13 @@
+<div class="tree">
+    <ul>
+      <li *ngFor="let node of treeData">
+        <span>{{ node.name }}</span>
+        <ul *ngIf="node.children">
+          <li *ngFor="let child of node.children">
+            <span>{{ child.name }}</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  

@@ -18,6 +18,7 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { StudentMarksComponent } from './student-marks/student-marks.component';
 import { StudentRegisterComponent } from './student-register/student-register.component';
+import { TreeViewComponent } from './tree-view/tree-view.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' }, 
@@ -42,6 +43,8 @@ export const routes: Routes = [
     { path: 'task-manager', component: TaskManagerComponent, canActivate: [AuthGuard] },
     { path: 'student-marks', component: StudentMarksComponent, canActivate: [AuthGuard] },
     { path: 'student-register', component: StudentRegisterComponent, canActivate: [AuthGuard] },
+    { path: 'tree-view', component: TreeViewComponent, canActivate: [AuthGuard] },
+   
    
     { path: '**', redirectTo: 'login' } ,
     
