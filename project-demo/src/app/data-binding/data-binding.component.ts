@@ -12,8 +12,7 @@ export class DataBindingComponent {
  title = 'Angular Data Binding Example';
 
 
- imageUrl = 'https://angular.io/assets/images/logos/angular/angular.svg';
-
+ imageUrl = 'https://media.licdn.com/dms/image/v2/D4E0BAQFfxIT9n-nFqg/company-logo_200_200/company-logo_200_200/0/1667394247767/blue_verse_systems_logo?e=2147483647&v=beta&t=ToQQfY6v97Z9JnEpChZA3GnNrcy5Pe11NBycPtt2m5o';
 
  username = '';
 

@@ -1,0 +1,55 @@
+/* Soft pastel color theme */
+body {
+    background-color: #fcefee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .register-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px 40px;
+    background-color: #fff5f8;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .register-container h2 {
+    color: #d889b8;
+    margin-bottom: 25px;
+  }
+  
+  .register-container input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #f2d6e1;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    transition: 0.3s ease;
+  }
+  
+  .register-container input:focus {
+    border-color: #d889b8;
+    outline: none;
+  }
+  
+  .register-container button {
+    background-color: #d889b8;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-container button:hover {
+    background-color: #c66ca2;
+  }
+  

@@ -1,5 +1,7 @@
 
-<button *ngIf="!isLoggedIn" class="btn btn-success login-btn" (click)="login()">Login</button>
+<div *ngIf="!isLoggedIn" class="login-container">
+  <button class="btn btn-success login-btn" (click)="login()">Login</button>
+</div>
 
 <div class="sidebar-container" *ngIf="isLoggedIn">
 
@@ -7,66 +9,142 @@
 
   <div class="sidebar" [ngClass]="{'sidebar-collapsed': isSidebarCollapsed}">
     <div class="sidebar-header border-bottom">
-      MENU
+      
     </div>
 
     <ul class="sidebar-nav">
-      <li class="nav-item mt-5">
-        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      </li><br>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/life-cycle" routerLinkActive="active">life cycle</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/directive" routerLinkActive="active">Directives</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/custom-directives" routerLinkActive="active">Custom Directives</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/data-binding" routerLinkActive="active">Data Binding</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/parent" routerLinkActive="active">Parent-Child</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/route', 'HelloFromRoute']" routerLinkActive="active">Route Communication</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/exception-handling" routerLinkActive="active">Exception Handling</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/curd-operation" routerLinkActive="active">CRUD Operation</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/rxjs" routerLinkActive="active">RxJS</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/promise-example" routerLinkActive="active">Promise Example</a>
-      </li><br>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/observable-example" routerLinkActive="active">Observable Example</a>
-      </li><br>
+      <li class="nav-item mt-4">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+          <i class="fas fa-home"></i> 
+          <span *ngIf="!isSidebarCollapsed">Dashboard</span>
+        </a>
+      </li>
       
       <li class="nav-item">
-        <a class="nav-link" routerLink="/state-management" routerLinkActive="active">state-management</a>
+        <a class="nav-link" routerLink="/life-cycle" routerLinkActive="active">
+          <i class="fas fa-sync-alt"></i> 
+          <span *ngIf="!isSidebarCollapsed">Life Cycle</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/directive" routerLinkActive="active">
+          <i class="fas fa-code"></i> 
+          <span *ngIf="!isSidebarCollapsed">Directives</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/custom-directives" routerLinkActive="active">
+          <i class="fas fa-magic"></i> 
+          <span *ngIf="!isSidebarCollapsed">Custom Directives</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/data-binding" routerLinkActive="active">
+          <i class="fas fa-exchange-alt"></i> 
+          <span *ngIf="!isSidebarCollapsed">Data Binding</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/parent" routerLinkActive="active">
+          <i class="fas fa-users"></i> 
+          <span *ngIf="!isSidebarCollapsed">Parent-Child</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/route', 'HelloFromRoute']" routerLinkActive="active">
+          <i class="fas fa-route"></i> 
+          <span *ngIf="!isSidebarCollapsed">Route Communication</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/exception-handling" routerLinkActive="active">
+          <i class="fas fa-bug"></i> 
+          <span *ngIf="!isSidebarCollapsed">Exception Handling</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/curd-operation" routerLinkActive="active">
+          <i class="fas fa-database"></i> 
+          <span *ngIf="!isSidebarCollapsed">CRUD Operation</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/rxjs" routerLinkActive="active">
+          <i class="fas fa-project-diagram"></i> 
+          <span *ngIf="!isSidebarCollapsed">RxJS</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/promise-example" routerLinkActive="active">
+          <i class="fas fa-handshake"></i> 
+          <span *ngIf="!isSidebarCollapsed">Promise Example</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/observable-example" routerLinkActive="active">
+          <i class="fas fa-eye"></i> 
+          <span *ngIf="!isSidebarCollapsed">Observable Example</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/state-management" routerLinkActive="active">
+          <i class="fas fa-cogs"></i> 
+          <span *ngIf="!isSidebarCollapsed">State Management</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/bar-chart" routerLinkActive="active">
+          <i class="fas fa-chart-bar"></i> 
+          <span *ngIf="!isSidebarCollapsed">Bar Chart</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/pie-chart" routerLinkActive="active">
+          <i class="fas fa-chart-pie"></i> 
+          <span *ngIf="!isSidebarCollapsed">Pie Chart</span>
+        </a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/task-manager" routerLinkActive="active">
+          <i class="fas fa-list"></i> 
+          <span *ngIf="!isSidebarCollapsed">Task Manager</span>
+        </a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/student-register" routerLinkActive="active">
+          <i class="fas fa-user-plus"></i> 
+          <span *ngIf="!isSidebarCollapsed">Student Register</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/student-marks" routerLinkActive="active">
+          <i class="fas fa-chart-line"></i> 
+          <span *ngIf="!isSidebarCollapsed">Student Marks</span>
+        </a>
+      </li>
+      
+       
+      
+      <li class="nav-item">
+        <button class="btn btn-danger w-100" (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i> 
+          <span *ngIf="!isSidebarCollapsed">Logout</span>
+        </button>
       </li><br>
 
-   
-      <li class="nav-item">
-        <button class="btn btn-danger w-100" (click)="logout()">Logout</button>
-      </li><br>
-      
     </ul>
   </div>
 

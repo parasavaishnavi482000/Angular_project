@@ -1,0 +1,22 @@
+<div class="task-container">
+    <h2>Task Manager</h2>
+  
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+      <input type="text" formControlName="title" placeholder="Task Title">
+      <textarea formControlName="description" placeholder="Task Description"></textarea>
+  
+      <button type="submit">{{ editingTask ? 'Update' : 'Add' }} Task</button>
+      <button type="button" *ngIf="editingTask" (click)="onCancel()">Cancel</button>
+    </form>
+  
+    <div class="task-list">
+        <div class="task-item" *ngFor="let task of tasks">
+          <h3>{{ task.title }}</h3>
+          <p>{{ task.description }}</p>
+          <button (click)="onEdit(task)">Edit</button>
+          <button (click)="onDelete(task.id)">Delete</button>
+        </div>
+      </div>
+      
+  </div>
+  

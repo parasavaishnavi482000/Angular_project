@@ -1,0 +1,8 @@
+<div class="marks-container" *ngIf="student">
+    <h2>{{ student.name }}'s Marks</h2>
+    <p><strong>Maths:</strong> {{ marks.maths }}</p>
+    <p><strong>English:</strong> {{ marks.english }}</p>
+    <p><strong>Science:</strong> {{ marks.science }}</p>
+    <button (click)="logout()">Logout</button>
+  </div>
+  

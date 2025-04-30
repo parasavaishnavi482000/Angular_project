@@ -32,7 +32,7 @@ p[appHoverHighlight] {
 
 p[appHoverHighlight]:hover {
   color: #fff;
-  background-color: lavender;
+  background-color: rgb(223, 143, 31);
   border-radius: 6px;
-  box-shadow: 0 0 8px rgba(230, 230, 250, 0.6);
+  box-shadow: 0 0 8px rgba(143, 98, 98, 0.852);
 }

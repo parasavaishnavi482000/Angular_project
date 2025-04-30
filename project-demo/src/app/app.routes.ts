@@ -11,9 +11,13 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { PromiseExampleComponent } from './promise-example/promise-example.component';
 import { ObservableExampleComponent } from './observable-example/observable-example.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { TaskManagerComponent } from './task-manager/task-manager.component';
 import { AuthGuard } from './auth.guard'; 
 import { StateManagementComponent } from './state-management/state-management.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { StudentMarksComponent } from './student-marks/student-marks.component';
+import { StudentRegisterComponent } from './student-register/student-register.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' }, 
@@ -33,6 +37,12 @@ export const routes: Routes = [
     { path: 'promise-example', component: PromiseExampleComponent, canActivate: [AuthGuard] },
     { path: 'state-management', component: StateManagementComponent, canActivate: [AuthGuard] },
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+    { path: 'bar-chart', component: BarChartComponent, canActivate: [AuthGuard] },
+    { path: 'pie-chart', component: PieChartComponent, canActivate: [AuthGuard] },
+    { path: 'task-manager', component: TaskManagerComponent, canActivate: [AuthGuard] },
+    { path: 'student-marks', component: StudentMarksComponent, canActivate: [AuthGuard] },
+    { path: 'student-register', component: StudentRegisterComponent, canActivate: [AuthGuard] },
+   
     { path: '**', redirectTo: 'login' } ,
     
 ];

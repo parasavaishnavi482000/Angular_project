@@ -1,4 +1,43 @@
-<div class="dashboard-container">
+<!-- <div class="dashboard-container">
     <h2>Welcome to Dashboard!</h2>
+  </div>
+   -->
+  
+   <div class="dashboard-wrapper">
+    <!-- Definition Box (Top Center) -->
+    <div class="definition-box" *ngIf="selectedCard">
+      <h3>{{ selectedCard.title }}</h3>
+      <p>{{ selectedCard.description }}</p>
+    </div>
+    <br><br>
+
+
+    <!-- Card Grid (Centered at the Bottom) -->
+    <div class="card-grid">
+      <div class="card bounce" (click)="selectCard('Modules', ' Modules are containers that organize an Angular app’s components, services, and other resources. The root module is typically AppModule, and they help in lazy loading and feature modularization.')">
+        <i class="fab fa-angular icon"></i>
+        <h4>Modules</h4>
+      </div>
+  
+      <div class="card pulse" (click)="selectCard('Components', 'Components define the view and behavior of a part of the UI, consisting of an HTML template, CSS styles, and a TypeScript class. They are the building blocks of an Angular application.')">
+        <i class="fas fa-random icon"></i>
+        <h4>Components</h4>
+      </div>
+  
+      <div class="card shake" (click)="selectCard('Directives', ' Directives are used to extend HTML capabilities by modifying the DOM structure or behavior. There are two types: Structural (*ngIf, *ngFor) and Attribute (ngClass, ngStyle).')">
+        <i class="fas fa-database icon"></i>
+        <h4>Directives</h4>
+      </div>
+  
+      <div class="card bounce" (click)="selectCard('Routing', 'Angular’s routing allows navigation between different views or components based on URL changes. It supports features like lazy loading, nested routes, and route guards for authentication and authorization.')">
+        <i class="fas fa-cogs icon"></i>
+        <h4> Routing</h4>
+      </div>
+  
+      <div class="card pulse" (click)="selectCard('Forms ', 'Forms in Angular include Template-driven and Reactive forms. Reactive forms provide more control and scalability by defining form logic and validation in the TypeScript file.')">
+        <i class="fas fa-code-branch icon"></i>
+        <h4>Forms </h4>
+      </div>
+    </div>
   </div>
   
