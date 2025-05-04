@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class DataBindingComponent {
 
- title = 'Angular Data Binding Example';
+ title = 'Angular Data Binding';
 
 
  imageUrl = 'https://media.licdn.com/dms/image/v2/D4E0BAQFfxIT9n-nFqg/company-logo_200_200/company-logo_200_200/0/1667394247767/blue_verse_systems_logo?e=2147483647&v=beta&t=ToQQfY6v97Z9JnEpChZA3GnNrcy5Pe11NBycPtt2m5o';
@@ -21,3 +21,42 @@ export class DataBindingComponent {
    alert('Button clicked!');
  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Component } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
+// import { ToastrModule, ToastrService } from 'ngx-toastr';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Required for ngx-toastr
+// import { CommonModule } from '@angular/common';
+
+// @Component({
+//   selector: 'app-data-binding',
+//   standalone: true,
+//   imports: [FormsModule, ToastrModule, BrowserAnimationsModule, CommonModule],
+//   templateUrl: './data-binding.component.html',
+//   styleUrls: ['./data-binding.component.css']
+// })
+// export class DataBindingComponent {
+
+//   title = 'Angular Data Binding';
+//   imageUrl = 'https://media.licdn.com/dms/image/v2/D4E0BAQFfxIT9n-nFqg/company-logo_200_200/company-logo_200_200/0/1667394247767/blue_verse_systems_logo?e=2147483647&v=beta&t=ToQQfY6v97Z9JnEpChZA3GnNrcy5Pe11NBycPtt2m5o';
+//   username = '';
+
+//   constructor(private toastr: ToastrService) {}
+
+//   onClick() {
+//     this.toastr.success('Button clicked!', 'Success');
+//   }
+// }

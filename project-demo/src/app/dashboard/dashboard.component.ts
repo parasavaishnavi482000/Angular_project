@@ -13,7 +13,6 @@ export class DashboardComponent {
   username: string = 'Vaishnavi';
   selectedCard: any = null;
 
-  // Function to select a card and show its definition
   selectCard(title: string, description: string) {
     this.selectedCard = {
       title: title,

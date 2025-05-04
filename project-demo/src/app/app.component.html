@@ -1,4 +1,13 @@
 
+
+<app-toaster
+  [message]="toastMessage"
+  [type]="toastType"
+  [show]="showToast">
+</app-toaster>
+
+<!-- Your form -->
+
 <div *ngIf="!isLoggedIn" class="login-container">
   <button class="btn btn-success login-btn" (click)="login()">Login</button>
 </div>
@@ -62,12 +71,14 @@
         </a>
       </li>
       
+      
       <li class="nav-item">
         <a class="nav-link" routerLink="/exception-handling" routerLinkActive="active">
           <i class="fas fa-bug"></i> 
           <span *ngIf="!isSidebarCollapsed">Exception Handling</span>
         </a>
       </li>
+      
       
       <li class="nav-item">
         <a class="nav-link" routerLink="/curd-operation" routerLinkActive="active">
@@ -122,6 +133,7 @@
           <span *ngIf="!isSidebarCollapsed">Tree View</span>
         </a>
       </li>  
+     
       <li class="nav-item">
         <a class="nav-link" routerLink="/task-manager" routerLinkActive="active">
           <i class="fas fa-list"></i> 
@@ -141,8 +153,11 @@
           <span *ngIf="!isSidebarCollapsed">Student Marks</span>
         </a>
       </li>
-      
-       
+     
+      <br>
+      <button (click)="submitForm()">Submit</button> 
+      <br>
+
       
       <li class="nav-item">
         <button class="btn btn-danger w-100" (click)="logout()">

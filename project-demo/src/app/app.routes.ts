@@ -19,6 +19,8 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { StudentMarksComponent } from './student-marks/student-marks.component';
 import { StudentRegisterComponent } from './student-register/student-register.component';
 import { TreeViewComponent } from './tree-view/tree-view.component';
+import { ToasterComponent } from './toaster/toaster.component';
+
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' }, 
@@ -40,12 +42,14 @@ export const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
     { path: 'bar-chart', component: BarChartComponent, canActivate: [AuthGuard] },
     { path: 'pie-chart', component: PieChartComponent, canActivate: [AuthGuard] },
-    { path: 'task-manager', component: TaskManagerComponent, canActivate: [AuthGuard] },
+    { path: 'tree-view', component: TreeViewComponent, canActivate: [AuthGuard] }, 
+    { path: 'toaster', component: ToasterComponent, canActivate: [AuthGuard] }, 
+    
+       { path: 'task-manager', component: TaskManagerComponent, canActivate: [AuthGuard] },
     { path: 'student-marks', component: StudentMarksComponent, canActivate: [AuthGuard] },
     { path: 'student-register', component: StudentRegisterComponent, canActivate: [AuthGuard] },
-    { path: 'tree-view', component: TreeViewComponent, canActivate: [AuthGuard] },
+    // { path: '**', redirectTo: 'login' } ,
+    { path: '**', redirectTo: 'student-marks' } ,
    
    
-    { path: '**', redirectTo: 'login' } ,
-    
 ];

@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class StateManagementService {
   private counterSubject = new BehaviorSubject<number>(0);
 
-  counter$ = this.counterSubject.asObservable();  // Observable to share state
+  counter$ = this.counterSubject.asObservable();  
 
   increment() {
     this.counterSubject.next(this.counterSubject.value + 1);

@@ -1,0 +1,8 @@
+<div *ngIf="show" class="toaster" [ngClass]="type">
+    <span class="icon">
+      {{ type === 'success' ? '✔️' : '❌' }}
+    </span>
+    <span class="message">{{ message }}</span>
+    <span class="close" (click)="closeToaster()">✖</span>
+  </div>
+  

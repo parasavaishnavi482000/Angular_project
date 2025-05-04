@@ -4,15 +4,11 @@
    -->
   
    <div class="dashboard-wrapper">
-    <!-- Definition Box (Top Center) -->
-    <div class="definition-box" *ngIf="selectedCard">
+     <div class="definition-box" *ngIf="selectedCard">
       <h3>{{ selectedCard.title }}</h3>
       <p>{{ selectedCard.description }}</p>
     </div>
     <br><br>
-
-
-    <!-- Card Grid (Centered at the Bottom) -->
     <div class="card-grid">
       <div class="card bounce" (click)="selectCard('Modules', ' Modules are containers that organize an Angular app’s components, services, and other resources. The root module is typically AppModule, and they help in lazy loading and feature modularization.')">
         <i class="fab fa-angular icon"></i>

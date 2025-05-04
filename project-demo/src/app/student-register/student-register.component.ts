@@ -12,12 +12,25 @@ import { FormsModule } from '@angular/forms';
 export class StudentRegisterComponent {
   studentName = '';
   studentID = '';
+  maths: any = '';
+  english: any = '';
+  science: any = '';
 
   constructor(private router: Router, private authService: AuthService) {}
 
   register() {
     if (this.studentName && this.studentID) {
-      localStorage.setItem('student', JSON.stringify({ name: this.studentName, id: this.studentID }));
+      const studentData = {
+        name: this.studentName,
+        id: this.studentID,
+        marks: {
+          maths: this.maths,
+          english: this.english,
+          science: this.science
+        }
+      };
+      localStorage.setItem('student', JSON.stringify(studentData));
+      alert('Student Registration Successful');
       this.authService.login();
       this.router.navigate(['/marks']);
     } else {
@@ -25,3 +38,4 @@ export class StudentRegisterComponent {
     }
   }
 }
+

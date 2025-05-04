@@ -11,15 +11,13 @@ import { CommonModule } from '@angular/common';
 })
 export class StudentMarksComponent {
   student: any;
-  marks = {
-    maths: 92,
-    english: 85,
-    science: 88
-  };
+  marks: any;
 
   constructor(private authService: AuthService, private router: Router) {
     const data = localStorage.getItem('student');
-    this.student = data ? JSON.parse(data) : null;
+    const parsed = data ? JSON.parse(data) : null;
+    this.student = parsed;
+    this.marks = parsed?.marks || {};
   }
 
   logout() {
