@@ -56,5 +56,44 @@ app.delete('/api/employees/:id', (req, res) => {
 });
 
  
+// Fetch all employees
+app.get('/api/tasks', (req, res) => {
+  db.query('SELECT * FROM task', (err, results) => {
+    if (err) return res.status(500).send({ error: 'Fetch failed' });
+    res.send(results);
+  });
+});
+ 
+// Add a new employee
+app.post('/api/tasks', (req, res) => {
+  const { title, description } = req.body;
+  const sql = 'INSERT INTO task (title, description) VALUES (?, ?)';
+  db.query(sql, [title, description], (err, result) => {
+    if (err) return res.status(500).send({ error: 'Insert failed' });
+    res.send({ message: 'task added', id: result.insertId });
+  });
+});
+ 
+// Update an existing employee
+app.put('/api/tasks/:id', (req, res) => {
+  const { id } = req.params;
+  const {title, description } = req.body;
+  const sql = 'UPDATE task SET title = ?, description = ? WHERE id = ?';
+  db.query(sql, [title, description, id], (err) => {
+    if (err) return res.status(500).send({ error: 'Update failed' });
+    res.send({ message: 'task updated' });
+  });
+});
+ 
+// Delete an employee
+app.delete('/api/tasks/:id', (req, res) => {
+  db.query('DELETE FROM task WHERE id = ?', [req.params.id], (err) => {
+    if (err) return res.status(500).send({ error: 'Delete failed' });
+    res.send({ message: 'task deleted' });
+  });
+});
+
+ 
 app.listen(3000, () => console.log('Server running on port 3000'));
  
+

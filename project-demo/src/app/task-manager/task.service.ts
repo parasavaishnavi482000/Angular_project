@@ -12,7 +12,7 @@ export class TaskService {
   tasks$ = this.tasksSubject.asObservable();
 
  // Example
-private apiUrl = 'http://localhost:3000/api/employees'; // If your backend runs on port 3000
+private apiUrl = 'http://localhost:3000/api/tasks'; // If your backend runs on port 3000
 // Replace with your API endpoint
 
   constructor(private http: HttpClient) {}
