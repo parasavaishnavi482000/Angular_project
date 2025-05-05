@@ -1,0 +1,11 @@
+<div class="container">
+    <h2 appHighlight>Employee Task Tracker</h2>
+  
+    <input type="text" [(ngModel)]="newTask" placeholder="Enter a new task" />
+    <button (click)="addTask()">Add Task</button>
+  
+    <ul>
+      <li *ngFor="let task of tasks" appHighlight>{{ task }}</li>
+    </ul>
+  </div>
+  
