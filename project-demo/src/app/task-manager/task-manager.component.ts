@@ -54,6 +54,7 @@ export class TaskManagerComponent implements OnInit {
         // Add the new task to the list
         this.tasks = [...this.tasks, newTask];
         this.taskForm.reset();
+        alert('Task added successfully!');
       });
     }
   }

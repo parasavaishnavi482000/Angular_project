@@ -18,15 +18,21 @@ export class PieChartComponent {
     responsive: false,
   };
   public pieChartLabels = [ [ 'Angular' ], [ 'React'], 'Java' ];
-  public pieChartDatasets = [{
-    data: [300, 500, 100],
-    backgroundColor: [
-      'balck', 
-      'pink', 
-      'grey'  
-    ],
-    hoverOffset: 4
-  }];
+  public pieChartData = {
+    labels: [['Angular'], ['React'], 'Java'],
+    datasets: [
+      {
+        data: [300, 500, 100],
+        backgroundColor: [
+          'black', 
+          'pink', 
+          'grey'  
+        ],
+        hoverOffset: 4
+      }
+    ]
+  };
+  
   
   public pieChartLegend = true;
   public pieChartPlugins = [];

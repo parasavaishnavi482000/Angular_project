@@ -1,8 +1,9 @@
 <canvas baseChart
-  [type]="'pie'"
-  [datasets]="pieChartDatasets"
-  [labels]="pieChartLabels"
-  [options]="pieChartOptions"
-  [plugins]="pieChartPlugins"
-  [legend]="pieChartLegend">
+        [data]="pieChartData"
+        [options]="pieChartOptions"
+        [type]="'pie'"
+        [legend]="pieChartLegend"
+        [plugins]="pieChartPlugins"
+        width="500"
+        height="500">
 </canvas>

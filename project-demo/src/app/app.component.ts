@@ -41,15 +41,15 @@ export class AppComponent {
   }
 
   // Example form submission (can trigger success or error)
-  submitForm() {
-    const isSuccess = true; // Simulate result
+  // submitForm() {
+  //   const isSuccess = true; // Simulate result
 
-    if (isSuccess) {
-      this.showSuccessToast('Form submitted successfully!');
-    } else {
-      this.showErrorToast('Something went wrong.');
-    }
-  }
+  //   if (isSuccess) {
+  //     this.showSuccessToast('Form submitted successfully!');
+  //   } else {
+  //     this.showErrorToast('Something went wrong.');
+  //   }
+  // }
 
   // Toaster control methods
   showSuccessToast(message: string) {

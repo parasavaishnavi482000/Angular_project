@@ -9,14 +9,14 @@ import { CommonModule } from '@angular/common';
 })
 export class ToasterComponent implements OnInit {
   @Input() message: string = '';
-  @Input() type: 'success' | 'error' = 'success'; // Determines the color/icon
+  @Input() type: 'success' | 'error' = 'success'; 
   @Input() show: boolean = false;
 
   ngOnInit(): void {
     if (this.show) {
       setTimeout(() => {
         this.show = false;
-      }, 3000); // Auto-hide after 3 seconds
+      }, 2000); 
     }
   }
 
